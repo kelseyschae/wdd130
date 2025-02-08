@@ -36,6 +36,9 @@ h1, h2, h3, h4, h5, h6 {
   font-family: var(--heading-font);
   color: var(--headline-color-on-white);
   text-align: center;
+  border-bottom: 3px solid var(--accent1-color);
+  padding-bottom: 10px;
+  margin-bottom: 20px;
 }
 
 p {
@@ -56,6 +59,7 @@ nav {
   gap: 20px;
   padding: 10px 0;
   width: 100%;
+  border-bottom: 3px solid var(--accent2-color);
 }
 
 nav a {
@@ -80,10 +84,12 @@ nav a:hover {
   border-radius: 5px;
   display: inline-block;
   text-align: center;
+  border: 2px solid var(--primary-color);
 }
 
 .book:hover, .join:hover {
   background-color: var(--accent2-color);
+  border-color: var(--accent1-color);
 }
 
 .msg {
@@ -93,6 +99,15 @@ nav a:hover {
   border-radius: 5px;
   max-width: 800px;
   text-align: center;
+  border: 2px solid var(--primary-color);
+}
+
+img {
+  display: block;
+  margin: 20px auto;
+  max-width: 300px;
+  border: 5px solid var(--accent1-color);
+  border-radius: 10px;
 }
 
 footer {
@@ -103,6 +118,7 @@ footer {
   width: 100%;
   position: relative;
   margin-top: auto;
+  border-top: 3px solid var(--accent1-color);
 }
 
 footer a {
