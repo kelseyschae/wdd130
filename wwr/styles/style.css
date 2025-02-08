@@ -1,115 +1,99 @@
-/* Set a max-width and center the page */
-#content {
-    max-width: 1600px;
-    margin: 0 auto;
-}
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@400;700&family=Rock+Salt&display=swap');
 
-/* Center elements */
-nav a,
-#hero-msg h1, #hero-msg h4,
-.button-box,
-main section {
-    text-align: center;
-}
-
-/* Background container for message */
-#background {
-    min-height: 725px;
-    background-color: var(--paragraph-background-color, #f4f4f4); /* Fallback color */
-}
-
-/* Background colors */
+/* Simple Reset */
 body {
     background-color: #fcfbfb;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
+    font-family: 'Raleway', Arial, sans-serif;
+    font-size: 22px;
+    margin: 0;
+    padding: 0;
 }
 
-header {
-    background-color: rgba(20, 30, 13, 0.7);
+h2 {
+    margin: 0;
 }
 
-nav a:hover {
-    background-color: black;
-    color: #d9c2a3; /* Ensure readability */
+/* Font styles */
+.home-title {
+    font-family: 'Rock Salt', 'Bradley Hand', sans-serif;
+    font-size: 2em;
 }
 
 .book, .join {
-    background-color: var(--accent1-color);
-    color: white;
-}
-
-.book:hover, .join:hover {
-    background-color: var(--accent2-color);
-    color: white;
-}
-
-.msg {
-    background-color: var(--secondary-color);
-}
-
-/* Footer styling */
-footer {
-    background-color: var(--primary-color, #333); /* Fallback color */
-    color: white;
-    text-align: center;
-    padding: 20px;
-    width: 100%;
-    position: relative;
-    margin-top: auto;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #f4e3c1; /* Off-white for contrast */
-    text-decoration: underline;
-}
-
-/* Foreground colors */
-nav a {
-    color: var(--nav-link-color);
-}
-
-.home-title,
-h4 {
-    color: var(--headline-color-on-white);
-}
-
-.msg h2 {
-    color: var(--headline-color-on-color);
+    font-size: 18px;
 }
 
 .msg p {
-    color: var(--paragraph-color-on-color);
+    font-size: 0.8em;
 }
 
-/* Set widths */
-.logo, .icon {
-    width: 80px;
+/* Line Height */
+.msg {
+    background-color: #6f7364;
+    line-height: 1.5em;
 }
 
-#hero-img {
-    width: 100%;
+/* Padding */
+#logo_link {
+    padding-top: 5px;
 }
 
-/* Remove underlines from links */
-nav a,
-.book, .join,
-footer a {
-    text-decoration: none;
+nav a {
+    padding: 35px;
 }
 
-/* Footer text size */
-footer p {
-    font-size: 1.2em;
+.book, .join {
+    padding: 15px 30px;
 }
 
-/* Ensure footer stays at bottom */
-main {
-    flex-grow: 1;
+.icon {
+    padding-top: 10px;
 }
+
+.msg {
+    padding: 35px;
+}
+
+.msg p {
+    padding-bottom: 15px;
+}
+
+footer {
+    padding: 25px 50px;
+}
+
+footer .social img {
+    padding-top: 15px;
+}
+
+/* Margins */
+.home-title {
+    margin-top: 10px;
+}
+
+.book, .join {
+    margin-top: 50px;
+}
+
+.rivers-card, .camping-card, .rapids-card {
+    margin: 200px 0;
+}
+
+footer {
+    margin-top: 200px;
+}
+
+/* Borders and Box-Sizing */
+.book, .join {
+    border-radius: 5px;
+}
+
+.card-img {
+    border: 10px solid black;
+}
+
+main section img {
+    box-sizing: border-box;
+}
+
