@@ -141,12 +141,6 @@ img {
   border-radius: 10px;
 }
 
-/* Make first image larger */
-img:first-of-type {
-  max-width: 400px;
-  border: 8px solid var(--accent2-color);
-}
-
 /* Footer with padding and spacing */
 footer {
   background-color: var(--primary-color);
@@ -172,4 +166,3 @@ footer a:hover {
   color: #f4e3c1;
   text-decoration: underline;
 }
-
