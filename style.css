@@ -1,0 +1,116 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=IM+Fell+French+Canon&family=Lato:ital,wght@0,400;0,700;1,400&display=swap');
+
+:root {
+  --primary-color: #355C7D;
+  --secondary-color: #F7D6BF;
+  --accent1-color: #1282A2;
+  --accent2-color: #35524A;
+  --heading-font: "Playfair Display", serif;
+  --paragraph-font: "Merriweather", serif;
+  --headline-color-on-white: #355C7D;
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: #355C7D;
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: #355C7D;
+  --nav-link-color: #355C7D;
+  --nav-background-color: #F7D6BF;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #1282A2;
+}
+
+body {
+  background-color: #fcfbfb;
+  font-family: var(--paragraph-font);
+  font-size: 18px;
+  margin: 0;
+  padding: 4em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--heading-font);
+  color: var(--headline-color-on-white);
+  text-align: center;
+}
+
+p {
+  font-family: var(--paragraph-font);
+  color: var(--paragraph-color-on-white);
+  padding: 1em;
+  text-align: center;
+  max-width: 800px;
+}
+
+nav {
+  background-color: var(--nav-background-color);
+  line-height: 3em;
+  text-align: center;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  width: 100%;
+}
+
+nav a {
+  color: var(--nav-link-color);
+  padding: 1em;
+  min-width: 120px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  color: var(--nav-hover-link-color);
+  background-color: var(--nav-hover-background-color);
+}
+
+.book, .join {
+  background-color: var(--accent1-color);
+  color: white;
+  font-size: 18px;
+  padding: 15px 30px;
+  margin-top: 50px;
+  border-radius: 5px;
+  display: inline-block;
+  text-align: center;
+}
+
+.book:hover, .join:hover {
+  background-color: var(--accent2-color);
+}
+
+.msg {
+  background-color: var(--secondary-color);
+  line-height: 1.5em;
+  padding: 20px;
+  border-radius: 5px;
+  max-width: 800px;
+  text-align: center;
+}
+
+footer {
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+  position: relative;
+  margin-top: auto;
+}
+
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: #f4e3c1;
+  text-decoration: underline;
+}
