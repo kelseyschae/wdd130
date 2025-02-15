@@ -38,7 +38,6 @@
   display: grid;
   grid-template-columns: repeat(5, 50px);
   grid-template-rows: repeat(5, 50px);
-  gap: 10px;
   position: relative;
 }
 
@@ -53,7 +52,7 @@
   background-color: green;
   grid-column: 2 / 3;
   grid-row: 1 / 2;
-  transform: translateY(25px); /* Move down */
+  transform: translateY(-25px); /* Move up */
   z-index: 3;
 }
 
@@ -61,7 +60,7 @@
   background-color: gold;
   grid-column: 3 / 4;
   grid-row: 1 / 2;
-  transform: translateY(50px); /* Move further down */
+  transform: translateY(-50px); /* Move further up */
   z-index: 2;
 }
 
@@ -69,7 +68,7 @@
   background-color: blue;
   grid-column: 4 / 5;
   grid-row: 1 / 2;
-  transform: translateY(75px); /* Move furthest down */
+  transform: translateY(-75px); /* Move furthest up */
   z-index: 1;
 }
 
