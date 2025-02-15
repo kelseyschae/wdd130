@@ -9,7 +9,7 @@
   grid-column: 1 / 3; /* Span two columns */
 } .green1 {
   background-color: green;
-  grid-row: 2 / 4; /* Span two rows */
+  /* Now each green box occupies a single row */
 }.yellow1 {
   background-color: gold;
 }.blue1 {
