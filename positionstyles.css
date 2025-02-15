@@ -109,24 +109,24 @@
 /* Activity 6 styles */.content6 {
   /* This is the parent of the activity 6 boxes. */
   display: grid;
-  grid-template-columns: repeat(4, 100px); /* Four equal-width columns */
-  grid-template-rows: repeat(3, 100px); /* Three equal-height rows */
+  grid-template-columns: repeat(3, 100px); /* Three equal-width columns */
+  grid-template-rows: repeat(2, 100px); /* Two equal-height rows */
   gap: 20px; /* Gap between rows and columns */
 }.red6 {
   background-color: red;
   grid-column: 1 / 2;
-  grid-row: 1 / 4; /* Span three rows */
+  grid-row: 1 / 3; /* Span two rows */
 }.green6 {
   background-color: green;
-  grid-column: 2 / 5; /* Span three columns */
+  grid-column: 2 / 3;
   grid-row: 1 / 2;
 }.yellow6 {
   background-color: gold;
-  grid-column: 3 / 5; /* Span two columns */
-  grid-row: 2 / 4; /* Span two rows */
+  grid-column: 1 / 3; /* Span two columns */
+  grid-row: 2 / 3;
 }.blue6 {
   background-color: blue;
-  grid-column: 2 / 3;
-  grid-row: 2 / 4; /* Span two rows */
+  grid-column: 3 / 4;
+  grid-row: 1 / 3; /* Span two rows */
   z-index: 1; /* Ensure blue box is on top */
 }
