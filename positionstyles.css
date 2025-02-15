@@ -9,9 +9,12 @@
   grid-column: 1 / 3; /* Span two columns */
 } .green1 {
   background-color: green;
-  /* Now each green box occupies a single row */
+  /* Each green box occupies a single row and is now a square */
+  width: 100px; 
 }.yellow1 {
   background-color: gold;
+  /* Each yellow box is now a square */
+  width: 100px;
 }.blue1 {
   background-color: blue; 
   grid-column: 1 / 3; /* Span two columns */
