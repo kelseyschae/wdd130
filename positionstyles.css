@@ -37,43 +37,39 @@
   /* This is the parent of the activity 2 boxes. */
   display: grid;
   grid-template-columns: repeat(5, 50px);
+  grid-template-rows: repeat(5, 50px);
   position: relative;
 }
 
 .red2 {
   background-color: red;
-  grid-column: 1 / 2;
+  grid-column: 2 / 3;
   grid-row: 1 / 2;
   z-index: 4; /* Ensure top layer */
-  position: relative;
-  left: 0px;
 }
 
 .green2 {
   background-color: green;
-  grid-column: 2 / 3;
-  grid-row: 1 / 2;
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+  margin-top: -25px; /* Overlap */
   z-index: 3;
-  position: relative;
-  left: -25px; /* Overlap the previous box */
 }
 
 .yellow2 {
   background-color: gold;
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
+  grid-column: 4 / 5;
+  grid-row: 3 / 4;
+  margin-top: -25px; /* Further overlap */
   z-index: 2;
-  position: relative;
-  left: -50px; /* Overlap the previous box */
 }
 
 .blue2 {
   background-color: blue;
-  grid-column: 4 / 5;
-  grid-row: 1 / 2;
+  grid-column: 5 / 6;
+  grid-row: 4 / 5;
+  margin-top: -25px; /* Most overlap */
   z-index: 1;
-  position: relative;
-  left: -75px; /* Overlap the previous box */
 }
 
 /* Activity 3 styles */
