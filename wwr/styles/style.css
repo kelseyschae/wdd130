@@ -32,22 +32,18 @@ body {
 }
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  background-color: var(--nav-background-color);
-  padding: 15px 50px;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
+  display: grid;
+  grid-template-columns: 150px auto; px
 }
+  
+
 
 nav {
-  display: flex;
-  gap: 20px;
+    display: flex;
+    justify-content: space-around;
 }
+   
+
 
 nav a {
   color: var(--nav-link-color);
@@ -146,7 +142,7 @@ footer {
   header {
     flex-direction: column;
     padding: 15px;
-  }
+  }gf
   nav {
     flex-direction: column;
     gap: 10px;
