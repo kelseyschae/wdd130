@@ -54,7 +54,7 @@ nav a {
 
 nav a:hover {
   background-color: var(--nav-hover-background-color);
-  border-radius: 5px;
+  border-radius: 10px:0cap
 }
 
 #hero {
@@ -63,7 +63,7 @@ nav a:hover {
   align-items: center;
   justify-content: center;
   position: relative;
-  width: 100%;
+  width: 100%;0cap:
   height: 500px;
   background: url('images/hero.png') no-repeat center center/cover;
   color: white;
@@ -81,7 +81,6 @@ nav a:hover {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
-
 .book {
   background-color: var(--secondary-color);
   color: #000;
@@ -89,7 +88,7 @@ nav a:hover {
   font-size: 1.2rem;
   border-radius: 5px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3;
 }
 
 .book:hover {
@@ -98,7 +97,7 @@ nav a:hover {
 }
 
 main {
-  display: flex;
+  display: grid
   justify-content: center;
   gap: 40px;
   padding: 50px 20px;
