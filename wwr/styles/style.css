@@ -32,18 +32,27 @@ body {
 }
 
 header {
-  display: grid;
-  grid-template-columns: 150px auto; px
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: var(--primary-color);
+  width: 100%;
 }
-  
 
+header a {
+  text-decoration: none;
+  color: var(--nav-link-color);
+}
+
+.logo {
+  height: 50px;
+}
 
 nav {
-l,ex;
-    justify-content: space-around; 
+  display: flex;
+  gap: 20px;
 }
-
-
 
 nav a {
   color: var(--nav-link-color);
@@ -81,6 +90,7 @@ nav a:hover {
   font-size: 1.2rem;
   margin-bottom: 20px;
 }
+
 .book {
   background-color: var(--secondary-color);
   color: #000;
@@ -88,7 +98,7 @@ nav a:hover {
   font-size: 1.2rem;
   border-radius: 5px;
   text-decoration: none;
-  transition: 0.3;
+  transition: 0.3s;
 }
 
 .book:hover {
@@ -96,8 +106,8 @@ nav a:hover {
   color: white;
 }
 
-main {
-  display: flex 
+.home-grid {
+  display: flex;
   justify-content: center;
   gap: 40px;
   padding: 50px 20px;
@@ -112,16 +122,16 @@ main {
 .card img {
   width: 100%;
   border: 5px solid #e0d5c0;
-  transition: transform 0.3s ease-in-out
+  transition: transform 0.3s ease-in-out;
   box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
 }
- 
+
 .card img:hover {
   transform: scale(1.05);
 }
 
 .card p { 
-  font-size: 1.0m;
+  font-size: 1rem;
   margin-top: 15px;
 }
 
@@ -136,12 +146,32 @@ footer {
   width: 100%;
 }
 
+footer a {
+  color: white;
+  text-decoration: none;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+.social {
+  display: flex;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+.social img {
+  width: 30px;
+  height: 30px;
+}
+
 /* Media Query for responsiveness */
 @media screen and (max-width: 768px) {
   header {
     flex-direction: column;
     padding: 15px;
-  }gf
+  }
   nav {
     flex-direction: column;
     gap: 10px;
@@ -150,9 +180,8 @@ footer {
     height: auto;
     padding: 80px 20px;
   }
-  main {
+  .home-grid {
     flex-direction: column;
     align-items: center;
   }
 }
-
