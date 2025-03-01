@@ -29,29 +29,17 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
+} 
 
 header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 10px 20px;
-  background-color: var(--primary-color);
-  width: 100%;
-}
-
-header a {
-  text-decoration: none;
-  color: var(--nav-link-color);
-}
-
-.logo {
-  height: 50px;
+  display: grid;
+  grid-template-columns: 150px auto;
 }
 
 nav {
   display: flex;
-  gap: 20px;
+  align-items: center;
+  justify-content: space-around;
 }
 
 nav a {
@@ -92,13 +80,13 @@ nav a:hover {
 }
 
 .book {
-  background-color: var(--secondary-color);
+  background-color: var(--secondary-color); 
   color: #000;
   padding: 12px 24px;
   font-size: 1.2rem;
   border-radius: 5px;
   text-decoration: none;
-  transition: 0.3s;
+  transition: 0.3s ease-in-out;
 }
 
 .book:hover {
@@ -106,7 +94,7 @@ nav a:hover {
   color: white;
 }
 
-.home-grid {
+main {
   display: flex;
   justify-content: center;
   gap: 40px;
@@ -138,32 +126,13 @@ nav a:hover {
 footer {
   display: flex;
   justify-content: center;
+
   align-items: center;
   background-color: var(--primary-color);
   color: white;
   text-align: center;
   padding: 20px;
   width: 100%;
-}
-
-footer a {
-  color: white;
-  text-decoration: none;
-}
-
-footer a:hover {
-  text-decoration: underline;
-}
-
-.social {
-  display: flex;
-  gap: 10px;
-  margin-top: 10px;
-}
-
-.social img {
-  width: 30px;
-  height: 30px;
 }
 
 /* Media Query for responsiveness */
@@ -180,8 +149,9 @@ footer a:hover {
     height: auto;
     padding: 80px 20px;
   }
-  .home-grid {
+  main {
     flex-direction: column;
     align-items: center;
   }
 }
+
