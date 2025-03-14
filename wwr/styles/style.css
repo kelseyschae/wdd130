@@ -67,6 +67,7 @@ nav a:hover {
   background-color: var(--nav-hover-background-color);
   border-radius: 10px;
 }
+
 /* Hero Section */
 #hero {
   display: flex;
@@ -175,3 +176,16 @@ main {
     max-width: 100%;
   }
 }
+
+
+footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--primary-color);
+  color: white;
+  text-align: center;
+  padding: 20px;
+  width: 100%;
+}
+
