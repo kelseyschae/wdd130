@@ -42,7 +42,7 @@ nav ul li a.active {
 /* Grid Layout */
 main {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr); /* Three columns for text, images, text */
     gap: 30px;
     max-width: 1100px;
     margin: 50px auto;
@@ -51,7 +51,7 @@ main {
 
 /* Hero Section */
 .hero {
-    grid-column: span 2;
+    grid-column: span 3;
     text-align: center;
     font-size: 26px;
     color: #004d4d; /* Dark teal */
@@ -61,17 +61,25 @@ main {
 /* Intro Section */
 .intro {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr; /* Three columns: text, images, text */
     gap: 25px;
     align-items: center;
 }
 
-/* Intro Text */
-.intro-text {
+/* Left Text */
+.intro-text-left {
     font-size: 18px;
     line-height: 1.8;
     color: #333;
-    max-width: 500px;
+    text-align: left;
+}
+
+/* Right Text */
+.intro-text-right {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+    text-align: right;
 }
 
 /* Image Adjustments */
@@ -79,11 +87,13 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Adds spacing between images */
+    align-items: center;
+    justify-content: center;
 }
 
 .intro-images img {
     width: 100%; /* Ensures responsiveness */
-    max-width: 450px; /* Prevents images from being too large */
+    max-width: 300px; /* Prevents images from being too large */
     height: auto; /* Maintains aspect ratio */
     display: block;
     margin: 0 auto; /* Centers the images */
@@ -106,3 +116,4 @@ footer a {
     text-decoration: none;
     font-weight: 600;
 }
+
