@@ -1,0 +1,94 @@
+/* Import Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+    color: #333;
+}
+
+/* Navigation */
+header {
+    background-color: #a7c5c5; /* Soft teal from site plan */
+    padding: 15px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #1a1a1a; /* Darker text for contrast */
+    font-weight: 600;
+}
+
+nav ul li a.active {
+    text-decoration: underline;
+    color: #004d4d; /* Deeper teal for active state */
+}
+
+/* Grid Layout */
+main {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+    max-width: 1100px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Hero Section */
+.hero {
+    grid-column: span 2;
+    text-align: center;
+    font-size: 26px;
+    color: #004d4d; /* Dark teal */
+    font-weight: 600;
+}
+
+/* Intro Section */
+.intro {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+.intro-text {
+    font-size: 18px;
+    line-height: 1.8;
+    color: #333;
+}
+
+.intro-images img {
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    background-color: #a7c5c5;
+    padding: 15px;
+    margin-top: 30px;
+    font-size: 14px;
+    color: #1a1a1a;
+}
+
+footer a {
+    color: #004d4d;
+    text-decoration: none;
+    font-weight: 600;
+}
