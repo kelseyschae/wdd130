@@ -61,7 +61,7 @@ main {
 /* Intro Section */
 .intro {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
     gap: 25px;
     align-items: center;
 }
@@ -71,7 +71,7 @@ main {
     font-size: 18px;
     line-height: 1.8;
     color: #333;
-    max-width: 400px;
+    max-width: 500px;
 }
 
 /* Image Adjustments */
@@ -79,12 +79,11 @@ main {
     display: flex;
     flex-direction: column;
     gap: 20px; /* Adds spacing between images */
-    justify-content: center;
 }
 
 .intro-images img {
     width: 100%; /* Ensures responsiveness */
-    max-width: 350px; /* Prevents images from being too large */
+    max-width: 450px; /* Prevents images from being too large */
     height: auto; /* Maintains aspect ratio */
     display: block;
     margin: 0 auto; /* Centers the images */
@@ -147,6 +146,7 @@ main {
 .profile-socials a:hover {
     background: #004d4d;
 }
+
 
 /* Footer */
 footer {
