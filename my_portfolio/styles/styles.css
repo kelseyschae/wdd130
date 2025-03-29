@@ -12,7 +12,7 @@ body {
 
 /* Navigation */
 header {
-    background-color: #a7c5c5; /* Soft teal from site plan */
+    background-color: #A8DADC; /* Soft teal from site plan */
     padding: 15px 0;
     text-align: center;
 }
@@ -116,7 +116,7 @@ main {
 }
 
 .card h2 {
-    color: #004d4d;
+    color: #9b39e6;
     font-size: 22px;
     margin-bottom: 5px;
 }
@@ -134,7 +134,7 @@ main {
 .profile-socials a {
     display: inline-block;
     text-decoration: none;
-    background: #a7c5c5;
+    background: #A8DADC;
     color: #fff;
     padding: 8px 12px;
     border-radius: 5px;
@@ -144,14 +144,14 @@ main {
 }
 
 .profile-socials a:hover {
-    background: #004d4d;
+    background: #9b39e6;
 }
 
 
 /* Footer */
 footer {
     text-align: center;
-    background-color: #a7c5c5;
+    background-color: #A8DADC;
     padding: 15px;
     margin-top: 30px;
     font-size: 14px;
@@ -159,7 +159,7 @@ footer {
 }
 
 footer a {
-    color: #004d4d;
+    color: #9b39e6;
     text-decoration: none;
     font-weight: 600;
 }
