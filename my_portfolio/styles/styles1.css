@@ -1,7 +1,24 @@
 /* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css?family=Poppins|Lora');
 
-
+/* Root variables */
+:root {
+  --primary-color: #A8DADC;
+  --secondary-color: #9b39e6;
+  --accent1-color: #F1FAEE;
+  --accent2-color: #1E1E1E;
+  --heading-font: 'Poppins', sans-serif;
+  --paragraph-font: 'Lora', serif;
+  --headline-color-on-white: #1E1E1E;
+  --headline-color-on-color: white;
+  --paragraph-color-on-white: #1E1E1E;
+  --paragraph-color-on-color: white;
+  --paragraph-background-color: #1E1E1E;
+  --nav-link-color: #1E1E1E;
+  --nav-background-color: #A8DADC;
+  --nav-hover-link-color: white;
+  --nav-hover-background-color: #9b39e6;
+}
 
 /* General Styles */
 body {
