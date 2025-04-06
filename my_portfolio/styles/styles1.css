@@ -22,59 +22,59 @@
 
 /* General Styles */
 body {
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-    color: #333;
+  font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f9;
+  color: #333;
 }
 
 /* Navigation */
 header {
-    background-color: #A8DADC; /* Soft teal from site plan */
-    padding: 15px 0;
-    text-align: center;
+  background-color: var(--nav-background-color);
+  padding: 15px 0;
+  text-align: center;
 }
 
 nav ul {
-    list-style: none;
-    padding: 0;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 nav ul li {
-    display: inline;
-    margin: 0 20px;
+  display: inline;
+  margin: 0 20px;
 }
 
 nav ul li a {
-    text-decoration: none;
-    font-size: 18px;
-    color: #1a1a1a; /* Darker text for contrast */
-    font-weight: 600;
+  text-decoration: none;
+  font-size: 18px;
+  color: #1a1a1a;
+  font-weight: 600;
 }
 
 nav ul li a.active {
-    text-decoration: underline;
-    color: #004d4d; /* Deeper teal for active state */
+  text-decoration: underline;
+  color: #004d4d;
 }
 
 /* Grid Layout */
 main {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 30px;
-    max-width: 1100px;
-    margin: 50px auto;
-    padding: 20px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+  max-width: 1100px;
+  margin: 50px auto;
+  padding: 20px;
 }
 
 /* Portfolio Gallery */
-
-.portfolio-intro {   
-    font-size: 18px;
-    line-height: 1.8;
-    color: #333;
-    max-width: 500px;
+.portfolio-intro {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #333;
+  max-width: 500px;
 }
 
 .portfolio-gallery {
@@ -89,15 +89,13 @@ main {
   max-width: 450px;
   height: auto;
   border-radius: 10px;
-    color: #9b39e6; /* Dark teal */
-    box-shadow: 0px 5px 8px (0, 0, 0, 0.15);
+  box-shadow: 0px 5px 8px rgba(0, 0, 0, 0.15);
 }
 
 /* Call-to-Action */
 .cta {
   text-align: center;
   margin-top: 30px;
-  
 }
 
 .cta .button {
