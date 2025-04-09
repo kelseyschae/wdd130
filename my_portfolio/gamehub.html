@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JS Game Hub</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #1e1e1e;
+      color: #f1faee;
+      margin: 0;
+      padding: 2rem;
+      text-align: center;
+    }
+    header {
+      margin-bottom: 3rem;
+    }
+    .game-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+    }
+    .game-card {
+      background: #2d2d2d;
+      padding: 1rem;
+      border-radius: 1rem;
+      color: #fff;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+      transition: transform 0.3s ease, background 0.3s;
+      cursor: pointer;
+    }
+    .game-card:hover {
+      background: #343a40;
+      transform: translateY(-8px);
+    }
+    canvas {
+      display: none;
+      margin: 1rem auto;
+      background: #000;
+      border: 3px solid #9b39e6;
+    }
+    footer {
+      margin-top: 4rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .footer-icon {
+      margin: 0 0.3rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>👾 JavaScript Game Hub</h1>
+    <p>Click a game card to play!</p>
+  </header>
+
+  <main class="game-grid">
+    <!-- Code Invaders -->
+    <div class="game-card" onclick="startInvaders()">
+      <h2>Code Invaders</h2>
+      <p>Use arrow keys to move and spacebar to shoot!</p>
+      <canvas id="invaderCanvas" width="300" height="200"></canvas>
+    </div>
+
+    <!-- Dungeon Dash -->
+    <div class="game-card" onclick="startDungeon()">
+      <h2> Dungeon Dash</h2>
+      <p>Collect keys and avoid traps!</p>
+      <canvas id="dungeonCanvas" width="300" height="300"></canvas>
+    </div>
+  </main>
+
+  <footer>
+    Built with 💻 and ☕ by Your Name &mdash;
+    <span class="footer-icon">🌐</span>
+    <a href="https://github.com/yourusername" style="color:#a8dadc; text-decoration:none;">GitHub</a>
+    <span class="footer-icon">•</span>
+    <a href="mailto:you@example.com" style="color:#a8dadc; text-decoration:none;">Contact</a>
+  </footer>
+
+  <script>
+    const invaderCanvas = document.getElementById("invaderCanvas");
+    const dungeonCanvas = document.getElementById("dungeonCanvas");
+    const shootSound = new Audio('https://www.soundjay.com/button/beep-07.wav');
+    const trapSound = new Audio('https://www.soundjay.com/button/beep-09.wav');
+    const winSound = new Audio('https://www.soundjay.com/button/beep-10.wav');
+
+    function stopAllGames() {
+      invaderCanvas.style.display = 'none';
+      dungeonCanvas.style.display = 'none';
+      cancelAnimationFrame(window.invaderAnim);
+      cancelAnimationFrame(window.dungeonAnim);
+    }
+
+    // === INVADERS GAME ===
+    function startInvaders() {
+      stopAllGames();
+      invaderCanvas.style.display = 'block';
+
+      const ictx = invaderCanvas.getContext("2d");
+      let ship = { x: 140, y: 180, w: 20, h: 10 }, bullets = [], enemies = [];
+      let keys = {}, score = 0, level = 1;
+      let spawnTimer, gameSpeed = 1500;
+
+      document.onkeydown = e => keys[e.key] = true;
+      document.onkeyup = e => keys[e.key] = false;
+
+      function spawnEnemy() {
+        enemies.push({ x: Math.random() * 280, y: 0, w: 20, h: 10 });
+      }
+
+      spawnTimer = setInterval(spawnEnemy, gameSpeed);
+
+      function update() {
+        if (keys['ArrowLeft']) ship.x -= 4;
+        if (keys['ArrowRight']) ship.x += 4;
+        if (keys[' '] && bullets.length < 10) {
+          bullets.push({ x: ship.x + 8, y: ship.y });
+          shootSound.play();
+        }
+
+        bullets.forEach(b => b.y -= 5);
+        bullets = bullets.filter(b => b.y > 0);
+
+        enemies.forEach(e => e.y += 2 + level);
+        enemies = enemies.filter(e => e.y < 200);
+
+        bullets.forEach((b, bi) => {
+          enemies.forEach((e, ei) => {
+            if (b.x > e.x && b.x < e.x + e.w && b.y > e.y && b.y < e.y + e.h) {
+              bullets.splice(bi, 1);
+              enemies.splice(ei, 1);
+              score++;
+            }
+          });
+        });
+
+        if (score >= level * 5) {
+          level++;
+          clearInterval(spawnTimer);
+          gameSpeed = Math.max(800, gameSpeed - 200);
+          spawnTimer = setInterval(spawnEnemy, gameSpeed);
+        }
+      }
+
+      function draw() {
+        update();
+        ictx.fillStyle = "black";
+        ictx.fillRect(0, 0, 300, 200);
+        ictx.fillStyle = "lime";
+        ictx.fillRect(ship.x, ship.y, ship.w, ship.h);
+        ictx.fillStyle = "yellow";
+        bullets.forEach(b => ictx.fillRect(b.x, b.y, 4, 10));
+        ictx.fillStyle = "red";
+        enemies.forEach(e => ictx.fillRect(e.x, e.y, e.w, e.h));
+        ictx.fillStyle = "white";
+        ictx.font = "16px Arial";
+        ictx.fillText("Score: " + score, 10, 20);
+        ictx.fillText("Level: " + level, 10, 40);
+        window.invaderAnim = requestAnimationFrame(draw);
+      }
+
+      draw();
+    }
+
+    // === DUNGEON DASH GAME ===
+    function startDungeon() {
+      stopAllGames();
+      dungeonCanvas.style.display = 'block';
+
+      const dctx = dungeonCanvas.getContext("2d");
+      let tile = 60;
+      let player = { x: 1, y: 1 }, key = { x: 4, y: 4 }, score = 0;
+      let traps = [
+        { x: 2, y: 2 }, { x: 3, y: 1 },
+        { x: 0, y: 4 }, { x: 4, y: 0 }
+      ];
+
+      document.onkeydown = function(e) {
+        let nx = player.x, ny = player.y;
+        if (e.key === "ArrowUp") ny--;
+        if (e.key === "ArrowDown") ny++;
+        if (e.key === "ArrowLeft") nx--;
+        if (e.key === "ArrowRight") nx++;
+        if (nx >= 0 && nx < 5 && ny >= 0 && ny < 5) {
+          player.x = nx; player.y = ny;
+        }
+      };
+
+      function draw() {
+        dctx.fillStyle = "#111";
+        dctx.fillRect(0, 0, 300, 300);
+        dctx.fillStyle = "gold";
+        dctx.fillRect(key.x * tile, key.y * tile, tile, tile);
+        dctx.fillStyle = "red";
+        traps.forEach(t => dctx.fillRect(t.x * tile, t.y * tile, tile, tile));
+        dctx.fillStyle = "cyan";
+        dctx.fillRect(player.x * tile, player.y * tile, tile, tile);
+
+        if (player.x === key.x && player.y === key.y) {
+          score++;
+          winSound.play();
+          key = { x: Math.floor(Math.random() * 5), y: Math.floor(Math.random() * 5) };
+        }
+
+        if (traps.some(t => t.x === player.x && t.y === player.y)) {
+          trapSound.play();
+          player = { x: 1, y: 1 };
+        }
+
+        dctx.fillStyle = "white";
+        dctx.font = "16px Arial";
+        dctx.fillText("Score: " + score, 10, 20);
+        window.dungeonAnim = requestAnimationFrame(draw);
+      }
+
+      draw();
+    }
+  </script>
+</body>
+</html>
+
+
