@@ -67,16 +67,16 @@
 
     <!-- Dungeon Dash -->
     <div class="game-card" onclick="startDungeon()">
-      <h2> Dungeon Dash</h2>
+      <h2>Dungeon Dash</h2>
       <p>Collect keys and avoid traps!</p>
       <canvas id="dungeonCanvas" width="300" height="300"></canvas>
     </div>
   </main>
 
   <footer>
-    Built with 💻 and ☕ by Your Name &mdash;
+    Built with JS, SwiftUI and HTML5 by Kelsey Schaefermeyer &mdash;
     <span class="footer-icon">🌐</span>
-    <a href="https://github.com/yourusername" style="color:#a8dadc; text-decoration:none;">GitHub</a>
+    <a href="https://github.com/kelseyschae" style="color:#a8dadc; text-decoration:none;">GitHub</a>
     <span class="footer-icon">•</span>
     <a href="mailto:you@example.com" style="color:#a8dadc; text-decoration:none;">Contact</a>
   </footer>
@@ -119,7 +119,7 @@
         if (keys['ArrowRight']) ship.x += 4;
         if (keys[' '] && bullets.length < 10) {
           bullets.push({ x: ship.x + 8, y: ship.y });
-          shootSound.play();
+          shootSound.play(); // Play sound when shooting
         }
 
         bullets.forEach(b => b.y -= 5);
@@ -134,6 +134,7 @@
               bullets.splice(bi, 1);
               enemies.splice(ei, 1);
               score++;
+              shootSound.play(); // Play sound when enemy is hit
             }
           });
         });
@@ -202,12 +203,12 @@
 
         if (player.x === key.x && player.y === key.y) {
           score++;
-          winSound.play();
+          winSound.play(); // Play win sound when key is collected
           key = { x: Math.floor(Math.random() * 5), y: Math.floor(Math.random() * 5) };
         }
 
         if (traps.some(t => t.x === player.x && t.y === player.y)) {
-          trapSound.play();
+          trapSound.play(); // Play trap sound when hitting a trap
           player = { x: 1, y: 1 };
         }
 
