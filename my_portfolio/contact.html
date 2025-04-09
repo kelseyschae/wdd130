@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Kelsey Schaefermeyer | Contact</title>
+  <link rel="stylesheet" href="styles/styles.css" />
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="logo">
+      <img src="images/kelsyeschae_logo.png" alt="Kelsey Schaefermeyer Design" />
+    </div>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <h1>Let's Connect</h1>
+      <p>Have a project in mind or just want to say hello? I’d love to hear from you!</p>
+    </section>
+
+    <section class="contact-form-section">
+      <form class="contact-form" action="mailto:your@email.com" method="POST" enctype="text/plain">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" required/>
+
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" required/>
+
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="6" required></textarea>
+
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Kelsey Schaefermeyer. All Rights Reserved.</p>
+    <p><a href="site-plan.html" target="_blank">View Site Plan</a></p>
+  </footer>
+</body>
+</html>
